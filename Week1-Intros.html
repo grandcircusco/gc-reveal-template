@@ -1,0 +1,2164 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Front-End - Week 1</title>
+
+    <meta name="description" content="A front-end web development bootcamp by Grand Circus Detroit">
+    <meta name="author" content="James York">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <!--Grand Circus branded theme -->
+    <link rel="stylesheet" href="reveal/gc/gc.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="reveal/css/main.css">
+
+
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <header>
+      <img src="reveal/gc/photo/gcreveallogo.png">
+    </header>
+
+    <div class="reveal convex center">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <section class="slides">
+        <section data-markdown>
+          # Welcome to the JavaScript Bootcamp!
+        </section>
+        <section >
+            <section>
+            <h2>Introduction</h2>
+
+            <h3>James York</h3>
+            <p>james@grandcircus.co | @kroysemaj | kroysemaj</p>
+            </section>
+            <section data-markdown>
+                ###James York
+                **_Work_**
+                - OnStar, Nexient, &amp; DTE
+
+                **_Education_**
+                - Baker College of Allen Park
+                - Many expensive degrees which I am now paying off :(
+
+                **_Community_**
+                - Detroit Craftsman Guild (co-organizer)
+                - Girl Develop It (Instructor, TA)
+                - Conference speaker (self.conference, Code Mash 2015)
+            </section>
+            <section >
+                <h3>Tax Deductions</h3>
+                <img src="images/Evie.jpg" alt="" width="354">
+                <img src="images/PosyAndMouse.jpg" alt="" width="400">
+            </section>
+            <section data-markdown>
+                ### Introductions (now you)
+                -  Who are you?
+                -  Where are you from?
+                -  What's your favorite movie?
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+              ## Course Expectations
+              What I expect from you...
+            </section>
+            <section data-markdown>
+              ### Be **Present**
+
+              Listen, soak up the information (there's a lot of it), process it.
+            </section>
+            <section data-markdown>
+              ### Ask **Questions**
+
+              I'm not big on formality. Feel free to ask any question that comes to mind. I'll also stop frequently for questions.
+              ![shrugging girl](images/shrug.jpg)
+            </section>
+            <section data-markdown>
+              ### **Support** each other
+
+              I'm a big proponent of pair programming. Any in-class exercise or project work may be paired and certain labs _will_ be paired or in groups. Larger final projects will be group projects.
+            </section>
+            <section data-markdown>
+              ### Have **fun**
+
+              See previous comment on my stance on formality and ceremony. Bored people learn nothing. I'll do what I can to make this fun as well as instructive.
+            </section>
+        </section>
+
+         <section>
+            <section data-markdown>
+              ## My goals for you
+            </section>
+            <section data-markdown>
+              ### My goals for you
+
+              Inculcate you with vital tools such as version control, specifically git and github.
+              ![git and github](images/gitGithub.jpg)
+            </section>
+            <section data-markdown>
+              ### My goals for you
+
+              Baptise you in the fires of JavaScript.
+            </section>
+            <section data-markdown>
+              ###My goals for you
+
+              Learn the basics of web and mobile architecture by seeing it in practice.
+            </section>
+          </section>
+
+          <section>
+            <section data-markdown>
+              ## Course Outline
+              (What are we doing here anyway?)
+            </section>
+            <section data-markdown>
+              ### 'The plan'
+              - Week 1 - HTML / CSS
+              - Week 2 - JavaScript
+              - Week 3 - jQuery / AJAX / JSON
+              - Week 4 - Angular JS / TDD
+              - Week 5 - Node JS / Stylus / Gulp / Express JS / APIs / Heroku / Node Project
+              - Week 6 - Advanced JS
+              - Week 7 - Project
+              - Week 8 - Project / Demo Day
+            </section>
+
+       <!-- <section data-markdown>
+          ## 'The plan'
+
+          - Each week will be split among a number of lectures focused around a weekly topic.
+          - There will be practical exercises every day
+          - Each week will end with a 'lab day' where we apply what we've learned to a particular aspect of our final project.
+        </section>
+        <section data-markdown>
+          ## The Plan in Detail
+          _Week 1_
+          - HTML - level set
+          - CSS - style and positioning
+
+          `Lab: Views for Final Project`
+        </section>
+        <section data-markdown>
+          ## The Plan in Detail
+          _Week 2_
+          - JavaScript Fundamentals
+          - AngularJS Framework
+
+          `Lab: Add behavior to views using fake data`
+        </section>
+        <section data-markdown>
+          ## The Plan in Detail
+          _Week 3_
+          - More JavaScript
+          - NodeJS Platform
+          - Web services using ExpressJS
+
+          `Lab: Create stubbed backend endpoints for the Final Project`
+        </section>
+        <section data-markdown>
+          ## The Plan in Detail
+          _Week 4_
+          - SQL
+          - Postgres
+          - Interfacing between Postgres and ExpressJS
+
+          `Lab: Create database calls for basic CRUD operations`
+        </section>
+        <section data-markdown>
+          ## The Plan in Detail
+          _Week 5_
+          - Final Project burndown
+          - Use all the things we've learned.
+          - Work in an agile / scrum environment
+          - Make an awesome thing
+
+          `Lab (all week): Finish off whatever is left with the Final Project / Deploy`
+        </section> -->
+       </section>
+
+          <section>
+        <section data-markdown>
+          ## Keys to success
+        </section>
+        <section data-markdown>
+          ### Keys to success
+
+          As of right now, your primary job description is:
+          ### figure it out
+        </section>
+        <section data-markdown>
+          ### Keys to success
+
+          Developers are essentially well-paid problem solvers. If you come across something you're not sure about you need to make an effort to solve the issue yourself.
+        </section>
+        <section data-markdown>
+          ### Keys to success
+
+          some 'rules' for when you get stuck:
+
+          1. First, ask google
+          1. Second, ask a fellow bootcamper
+          1. Third, ask another fellow bootcamper
+          1. If you're still stumped ask me
+        </section>
+        <section data-markdown>
+          ### Keys to success
+
+          The rule about 'the rules'
+
+          That said, don't be a hero and spin your wheels for hours without progress. It profits no one. If you're genuinely stuck, ask for help and keep asking until you get it.
+
+          ![Badass gif](images/BADA55.gif)
+        </section>
+        <section data-markdown>
+          ### keys to success
+
+          _Most importantly_
+
+          ###PRACTICE!!
+
+          We won't have a lot of 'homework' for this class but any extra time you spend workin on this stuff will only deepen your understanding of the material. If you finish an assignment early, look for ways to go a step further or do some extra work on the Final Project.
+        </section>
+          </section>
+          <section>
+        <section data-markdown>
+          ## Getting Started
+
+          **Note** that some of this should already be done. This is mostly a checklist of things we will need for smooth(ish) sailing in this course.
+        </section>
+        <section data-markdown class='table-32px'>
+          ### Get Connected
+
+          wifi: Madison
+
+          pw: Bro@dw@y\#
+        </section>
+        <section data-markdown>
+          ### Install Google Chrome
+
+          (If you don't already have it)
+
+          Technically any modern browser will work but we will using some extensions that are specific to Chrome for this course. So make sure you have Chrome on your machine.
+        </section>
+        <section data-markdown>
+          ### Install a text editor
+
+          A couple of recommendations:
+          - Sublime Text*
+          - Atom.io
+          - Whatever else you're comfortable with
+
+          \*  I'm most comfortable with Sublime and I will be of the most help to you if you use it. Anything else and you're on your own.
+        </section>
+        <section data-markdown>
+          ### Slack Channel
+
+          You've probably already been invited to the Slack channel.
+          http://www.grand-circus.slack.com
+
+          If you haven't, let me know at the next break and we will get you added.
+        </section>
+        <section data-markdown>
+          ### Private Group
+
+          `javascript`
+
+          We have a private group within the Slack channel specifically for this bootcamp. It will be a place for communication and collaboration between classes and over the weekend. It will also be where I post slides and other extra materials.
+        </section>
+        <section data-markdown>
+          ### github
+
+          [github.com](http://github.com)
+
+          Make yourself a GitHub profile.
+
+          It will be a little while before we need it, but go ahead and take care of this now while we're setting up everything.
+        </section>
+        <section data-markdown>
+          ### git
+
+          To download git, visit
+
+          [git's website](http://www.git-scm.com/download),
+
+          choose your platform and install git.
+
+          Like GitHub, it'll be a little while before we need this, but better to get all of this stuff out of the way at once.
+        </section>
+        <section data-markdown>
+          ### Trello
+
+          [Trello.com](http://trello.com)
+
+          Make yourself a Trello profile.
+
+          Trello is a web-based organizational tool. It can be used for lots of different things but we will be using it as our card wall for the final project for this class.
+
+          Once you have your Trello and GitHub user names, post them in the Slack channel.
+        </section>
+
+          </section>
+
+
+        <section data-markdown>
+          ## Questions?
+        </section>
+        <section data-markdown>
+          ![new content ahead](images/grant.png)
+        </section>
+
+        <!-- Suggested lunch break for Program Day 1 -->
+
+        <section data-markdown>
+          ### Goals for this unit
+          1. The Website as Communication
+          1. Introduction to HTML & CSS
+          1. HTML 101
+          1. **Exercise:**  Build a static HTML site from scratch
+        </section>
+
+          <section>
+        <section data-markdown>
+          ## What are are websites good for?
+        </section>
+        <section data-markdown>
+          ## How is a website valuable to a company?
+        </section>
+        <section data-markdown>
+          ## What can you do with a website?
+        </section>
+        <section data-markdown>
+          ## What _can't_ you do with a website?
+        </section>
+              </section>
+
+          <section>
+        <section data-markdown>
+          ![Website Example - TurboTax](images/website1.png)
+        </section>
+        <section data-markdown>
+          ![Website Example - Reaction gifs](images/website2.png)
+        </section>
+        <section data-markdown>
+          ![Website Example - Facebook](images/website3.png)
+        </section>
+        <section data-markdown>
+          ![Website Example - Million Dollar Homepage](images/website4.png)
+        </section>
+        <section data-markdown>
+          ![Website Example - Google News](images/website5.png)
+        </section>
+        <section data-markdown>
+          ![Website Example - Gaming](images/website6.png)
+        </section>
+        <section data-markdown>
+          ![Website Example - Kickstarter](images/website7.png)
+        </section>
+        <section data-markdown>
+          ![Website Example - Inception Button](images/website8.png)
+        </section>
+              </section>
+
+          <section>
+        <section data-markdown>
+          Every website on the internet uses HTML & CSS.
+
+          ![HTML everywhere](images/htmlEverywhere.jpg)
+        </section>
+        <section data-markdown>
+          ...most of them use JavaScript as well, in one form or another.
+        </section>
+        <section data-markdown>
+          ### DEMO!
+
+          (right click in the browser and select `Inspect Element`)
+        </section>
+        <section data-markdown>
+          ![Inspect Source](images/InspectSource.png)
+        </section>
+          </section>
+
+          <section>
+        <section data-markdown>
+          ## Terminology
+        </section>
+        <section data-markdown>
+          ### Terminology
+
+          Some key terms or phrases that are used as a matter of course in the software industry. You may know some or all of these, or you may have heard the terms but be unclear about their actual meaning. They are common jargon among developers
+        </section>
+        <section data-markdown>
+          ### Web Development
+
+          Web development is a broad term for the work involved in developing a web site for the Internet. In industry parlance, 'web development' usually refers to the more code-related tasks such as programming JavaScript, coding HTML and CSS. It can even extend to tasks related to the back end server infrastructure such as creating web services and handling business logic for a company or product.
+        </section>
+        <section data-markdown>
+          ### Web Design
+
+          The process of planning & structuring a website; specifically, the visual aspects and assets for the site. Recently, this job description has also begun to include interaction design. That is, designing the user experience (UX), information architecture, and the flow of the application or site.
+        </section>
+        <section data-markdown>
+          ### web site
+
+          A largely informational web page. While they may include dynamic elements and react to user inputs. The general purpose of a web site is to provide information about a person, business, product, or service.
+        </section>
+        <section data-markdown>
+          ### web application
+
+          A more recent term to indicate a web site whose sole purpose is not just informational, but rather functional. Web applications have become robust enough to do everything from our taxes, manage our personal calendars, or even do standard desktop publishing tasks.
+        </section>
+        <section data-markdown>
+          ### Front End
+
+          The visible and interactive parts of a website or application.
+        </section>
+        <section data-markdown>
+          ### Back End
+
+          The 'invisible' or inner functionality of a website or application. Examples include costly calculations, interacting with a database or making use of web service end points. While we're at it...
+        </section>
+        <section data-markdown>
+          ### Web Service
+
+          A software function provided at a network address over the Web. The W3C defines a Web service generally as:
+
+          >"A software system designed to support interoperable machine-to-machine interaction over a network."
+        </section>
+        <section data-markdown>
+          ### Database
+
+          A software system for storing data long term. This is also sometimes referred to as a 'persistance layer'.
+        </section>
+        <section data-markdown>
+          ### Version control
+
+          A software tool for managing changes to a set of files, website, application or any collection of files and for reconciling the differences between those files when conflicts emerge.
+        </section>
+        <section data-markdown>
+          ### Application Programming Interface (API)
+
+          An API is a set of routines, protocols, and tools for building software applications. An API expresses a software component in terms of its operations, inputs, outputs, and underlying types. An API defines functionalities that are independent of their respective implementations, _which allows definitions and implementations to vary without compromising each other._
+        </section>
+          </section>
+
+
+        <section data-markdown>
+          ## QUESTIONS?
+        </section>
+
+          <section>
+        <section data-markdown>
+          ## HTML
+
+          ![It's About to go Down!](images/ItsAboutToGoDown.gif)
+        </section>
+        <section data-markdown>
+          ### _Hypertext Markup Language_
+          - Developed by Tim Berners-Lee
+          - Developed in 1989 at CERN
+          - Originally developed as a way to share documents
+        </section>
+        <section data-markdown>
+          ## HTML
+          ### Structure
+        </section>
+        <section data-markdown>
+          ![html example](images/html.png)
+        </section>
+        <section data-markdown>
+          ## CSS
+          ### Presentation
+        </section>
+        <section data-markdown>
+          ![html example](images/css.png)
+        </section>
+          </section>
+
+
+        <!-- HTML Lesson -->
+<!--NEW SECTION-->
+          <section data-markdown>
+          ## html 101
+        </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+          ## HTML
+
+          ### Hypertext Markup Language
+          </section>
+<!--NEW SECTION-->
+          <section>
+        <section data-markdown>
+          ## HTML Elements
+
+          An element is an individual component of HTML
+        </section>
+        <section data-markdown>
+          ### HTML Tags
+
+          A tag marks the beginning and end of an element.
+
+          _Tags are containers._ They tell you something about the content between the opening & closing tags.
+        </section>
+        <section data-markdown>
+          ### Anatomy of an HTML element
+
+          opening tag
+
+          `< p >`
+
+          closing tag
+
+          `< /p >`
+        </section>
+        <section data-markdown>
+          ### Example
+
+          `<p>This is a paragraph</p>`
+
+          A paragraph elment consists of an opening `&lt;p&gt;` tag and a closing `&lt;/p&gt;` tag and the content between the tags.
+        </section>
+      </section>
+<!--NEW SECTION-->
+          <section>
+        <section data-markdown>
+          ## Different kinds of elements
+
+          Elements can be either container elements (they hold content) or stand-alone elements, sometimes called self-closing elements.
+        </section>
+        <section data-markdown>
+          ### Different kinds of elements
+
+          Paragraph elements are containers
+
+          `&lt;p&gt;Hi, I contain content&lt;/p&gt;`
+
+          Image elements are stand-alone
+
+          `&lt;img  src="james.jpg" /&gt;`
+        </section>
+        <section data-markdown>
+          ### Attributes
+
+          1. Provide additional information about HTML elements
+          1. Attribute tags include class, id, style, language, and source
+          1. Attributes are positioned inside the opening tag, before the right bracket
+          1. Attributes are paired with values. Key / value pairs are an important concept in programming.
+          1. Selected from a pre-defined set of possible attributes depending on the element.
+        </section>
+        <section data-markdown>
+          ### Values
+
+          1. Values are assigned to attributes
+          1. Values must be contained inside quotation marks
+        </section>
+        <section data-markdown>
+          ### example attributes
+
+          `&lt;p id="trademark"&gt;An inline element&lt;p&gt;`
+        </section>
+        <section >
+          <h3>example attributes</h3>
+
+          <pre>
+            <code>
+              &lt;div class="container"&gt;
+              A bunch of stuff!
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </section>
+      </section>
+
+<!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+          ##DOCTYPE
+
+          The first element on every HTML page. It tells the browser to expect HTML and what version to use.
+        </section>
+        <section data-markdown>
+          ###DOCTYPE
+
+          ####HTML 5
+
+          `&lt;!doctype html&gt;`
+
+          ####HTML 4
+
+          `&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+          "http://www.w3.org/TR/html4/loose.dtd" &gt; `
+        </section>
+        <section data-markdown>
+          ###HTML tag
+
+          After the doctype, all page content must be contained in the `&lt;html&gt;` tags
+        </section>
+        <section data-markdown>
+          ###HEAD tag
+
+          The `&lt;head&gt;` tag contains the page title and metadata about the page. This information is not visible to the user but is used by the browser. Additional infomation in the head tag can be used by search engines to index pages.
+        </section>
+        <section data-markdown>
+          ###title tag
+
+          The `&lt;title&gt;` tag is the 'name' of your page. It is what is displayed in the stop of the browser when you load a page.
+        </section>
+        <section data-markdown>
+          ###BODY tag
+
+          The `&lt;body&gt;` tag contains all of the visible content of the page. Elements in the body are visible to the user by default.
+        </section>
+      </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+          ##Nesting
+
+          HTML elements 'nest' inside of one another. The element that opens first closes last.
+        </section>
+<!--NEW SECTION-->
+          <section>
+            <section data-markdown>
+              ## Content Tags
+            </section>
+          <section data-markdown>
+          ###division tag
+
+          The `&lt;div&gt;` tag is the defacto container tag. It offers no extra styling and serves as a way to group elements on a page together.
+        </section>
+        <section data-markdown>
+          ###paragraph tag
+
+          The `&lt;p&gt;` tag allows the formatting of body copy in a readable manner since HTML does not recognize whitespace.
+        </section>
+        <section data-markdown>
+          ###heading element
+
+          Heading tas are for designating titles and subtitles.
+
+          `&lt;h1&gt; This is a heading!&lt;/h1&gt;`
+
+          There are 6 flavors of heading: `h1, h2, h3` etc. Larger number means smaller heading.
+        </section>
+      </section>
+<!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Lists
+          </section>
+          <section data-markdown>
+          ###List element
+
+          The `&lt;ul&gt;` and `&lt;ol&gt;` tags allow you to create lists of items `&lt;li&gt;` on your page.
+
+          `&lt;ul&gt;` is for unordered lists.
+
+          `&lt;ol&gt;` is for ordered (numbered) lists.
+
+          This tag will change how the the list items are rendered.
+        </section>
+        <section data-markdown>
+          ###Ordered List
+
+          ![Ordered List](images/ol.png)
+
+
+          ![Ordered List Rendered](images/ol-rendered.png)
+        </section>
+        <section data-markdown>
+          ###Unordered List
+
+          ![Unordered List](images/ul.png)
+
+          ![Unordered List Rendered](images/ul-rendered.png)
+        </section>
+      </section>
+<!--NEW SECTION-->
+          <section>
+            <section data-markdown>
+              ## Links
+            </section>
+              <section data-markdown>
+              ### Anchor element
+
+              Links to other sites on the web (or within your project) are created using this element.
+
+              `&lt;a href="http://facebook.com"&gt;Facebook&lt;/a&gt;`
+
+              Note: I do not call this a 'Link' tag even though we refer to these hyperlinks as such. There is already a link tag...
+              </section>
+              <section data-markdown>
+                  ### Link element
+
+                  Unlike the anchor element. The `&lt;link&gt;` specifies relationships between the current document and an external resource.
+
+                  Most often this manifests as how CSS files are included with an HTML file.
+
+                  `&lt;link src="main.css" rel='stylesheet' /&gt;`
+              </section>
+
+
+      </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+          ##HTML comments
+
+          Like any other good coding language, HTML offers comments. They operat like comments in any other language. They are ignored by the browser engine.
+
+          `&lt;!-- Hello, I am a comment. --&gt;`
+        </section>
+<!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+            ## Tables
+          </section>
+          <section data-markdown>
+          ### Table element
+
+          Tables are a way to represent complex information in a grid format. They are made of rows and columns.
+
+          Tables are compound elements (similar to lists) they are made up of several elements.
+
+          Element | Description
+          --- | ---
+          `&lt;table&gt;` | Table element
+          `&lt;tr&gt;` | Table row
+          `&lt;td&gt;` | Table cell
+          `&lt;th&gt;` | Table header cell (optional)
+        </section>
+        <section >
+          <h3>Table example</h3>
+
+          <img src="images/tableExample.png" alt="table example" style="float: left">
+          <img src="images/renderedTable.png" alt="rendered table example">
+        </section>
+        <section data-markdown>
+          ##Styled tables
+
+          ![example table](images/table1.png)
+          ![example table](images/table2.gif)
+        </section>
+        <section data-markdown>
+          ### A note on tables
+
+          You may be thinking it now or you may think later that tables would be a great way to position content for site...
+        </section>
+        <section data-markdown>
+          Don't do that. Just... don't. Trust me on this. It's a bad idea.
+        </section>
+        <section data-markdown>
+          (srsly, don't)
+
+          ![terminator](images/rage.gif)
+        </section>
+      </section>
+<!--NEW SECTION-->
+
+          <section data-markdown>
+          ### What's wrong wrong with this code?
+
+          ![Bad Code](images/wrong1.png)
+        </section>
+        <section data-markdown>
+          ###What's wrong wrong with this code?
+
+          ![Bad Code](images/wrong2.png)
+        </section>
+        <section data-markdown>
+          ### What's wrong wrong with this code?
+
+          ![Bad Code](images/wrong3.png)
+        </section>
+
+<!--NEW SECTION-->
+          <section>
+          <section data-markdown>
+          ##Folder Structure
+
+          This stuff is not exciting but it's _important_.
+        </section>
+        <section data-markdown>
+          ### Simple Site structure
+
+          Wherever you are going to keep your project work:
+          - Create a new folder called HTML-Exercise1
+          - Inside that folder create a file called index.html
+        </section>
+      </section>
+<!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+          ##Exercise
+          ###Build an HTML Page
+        </section>
+        <section data-markdown>
+          ### Simple Site construction
+
+          Open up `index.html` in your text editor and enter this code.
+
+          Now add a heading, paragraph, and a list to the page. Ask for help (remember the rules), if you get stuck. When done, open it in your browser and behold the majesty.
+        </section>
+      </section>
+<!--NEW SECTION-->
+        <section>
+          <section data-markdown>
+          ## Lab 1
+          ###Build another website
+        </section>
+        <section data-markdown>
+          ###Slightly More Complex website construction
+
+          In a new project folder, create another basic site using only HTML from scratch.
+        </section>
+        <section>
+          <p>Your site should contain the following elements:</p>
+          <ul>
+            <li>Basics: Doctype, HTML, Head, & Body</li>
+            <li>One or more division tags for organization</li>
+            <li>At least 3 headings of different size</li>
+            <li>A least 5 paragraphs</li>
+            <li>One of each list type (ordered and unordered)</li>
+            <li>At least 3 links</li>
+            <li>At least 2 images</li>
+            <li>some HTML comments</li>
+            <li>1 table</li>
+          </ul>
+            </section>
+            <section data-markdown>
+              ###Bonus!
+
+              Use some combination of elements such as:
+
+              - A list of links
+              - An image that serves as a hyperlink
+            </section>
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ![new content ahead](images/grant.png)
+          </section>
+
+<!--NEW SECTION-->
+          <section data-markdown>
+              ## Welcome back!
+          </section>
+          <section data-markdown>
+              ## Questions?
+          </section>
+          <section data-markdown>
+              ### Goals for this unit
+              1. Review HTML
+              1. CSS 101
+              1. Inline vs Block Elements
+              1. HTML + CSS
+          </section>
+          <section data-markdown>
+              ## Review
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ## CSS 101
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Cascading Style Sheets
+
+                  (remember that 'cascading' part)
+              </section>
+              <section>
+                  <h3>CSS in the wild</h3>
+                  <pre>
+                      <code>.reveal.page .slides section {
+padding: 30px;
+min-height: 700px;
+-moz-box-sizing: border-box;
+box-sizing: border-box; }
+
+.reveal.page .slides section.past {
+z-index: 12; }
+
+.reveal.page .slides section:not(.stack):before {
+content: '';
+position: absolute;
+display: block;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background: rgba(0, 0, 0, 0.1);
+-webkit-transform: translateZ(-20px);
+transform: translateZ(-20px); }
+                      </code>
+                  </pre>
+              </section>
+              <section data-markdown>
+                  ### CSS Rules
+
+                  Individual components of CSS are called rules
+              </section>
+              <section data-markdown>
+                  ### CSS Rules
+
+                  CSS rules are made up of two parts:
+                  - One or more selectors
+                  - One or more declarations
+                  - The declaration must be inside curly braces that follows the selector
+              </section>
+      </section>
+<!--NEW SECTION-->
+              <section>
+                <section data-markdown>
+                      ### CSS Syntax
+
+                      ![css](images/cssSyntax.gif)
+                  </section>
+                  <section>
+                      <h3>CSS Comments</h3>
+
+                      <p>Just like HTML, CSS offers comments:</p>
+
+                      <pre><code class="css">/* This is a CSS comment,
+it can be multi-line */
+                          </code></pre>
+                  </section>
+              </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ### CSS Declarations
+                  Declarations are made up of the property and value of the style you want to apply.
+
+                  They can be grouped together so that more than one declaration may be applied to a selected element.
+
+                  Declaration groups must be surrounded by curly brackets.
+
+                  Declarations must end in a semicolon.
+                  ![css declarations](images/cssDeclarations.png)
+              </section>
+              <!-- Commenting in case separate slides are preferred for this
+              <section data-markdown>
+                  ###CSS Declarations
+
+                  Declarations must end in a semicolon.
+              </section>
+              <section data-markdown>
+                  ###CSS Declarations
+
+                  Declaration groups must be surrounded by curly brackets.
+              </section>
+              <section data-markdown>
+                  ###CSS Declarations
+
+                  ![css declarations](images/cssDeclarations.png)
+              </section>-->
+         </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ### CSS Selector
+
+                  The selector instructs the browser to search the page for any HTML element that matches the given criteria. It applies any applicable declarations to that element.
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - element
+
+                  Elements can be selected by their element name. In this case, all elements of that element type will be selected and have the styles applied.
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - element
+
+                  ![element selector](images/elementSelector.png)
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - class
+
+                  Elements can be selected based on HTML attributes such as class. In this case all elements that have a matching class attribute will be selected.
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - class
+
+                  ![Class selector](images/classSelector.png)
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - ID
+
+                  Elements can also be selected based on HTML attribute ID. In this case only one element would be selected, as HTML IDs are intended to be unique.
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - ID
+
+                  ![Class selector](images/idSelector.png)
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - child selectors
+
+                  Selectors can be combined to become more specific. This example selects searches for any paragraph tag that is nested inside a div tag.
+
+                  ![child selector](images/childSelector.png)
+              </section>
+              <section data-markdown>
+                  ###CSS Selector - multiple
+
+                  In addition a set of declarations can be applied to more than one selector by listing a number of comma-separated selectors.
+
+                  ![child selector](images/multiSelector.png)
+              </section>
+         </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ###Pop Quiz hot shot
+
+                  Look at the following examples and tell me which Elements (if any) would be returned by the following selectors.
+              </section>
+              <section >
+                  <h3>Pop quiz</h3>
+
+              <pre><code class="css">
+p {
+/* blah blah */
+}
+              </code></pre>
+              </section>
+              <section >
+                  <h3>Pop quiz</h3>
+
+              <pre><code>
+#fuzzy {
+/* blah blah */
+}
+              </code></pre>
+              </section>
+              <section >
+                  <h3>Pop quiz</h3>
+
+              <pre><code>
+.blue {
+/* blah blah */
+}
+              </code></pre>
+              </section>
+              <section >
+                  <h3>Pop quiz</h3>
+
+              <pre><code>
+.blue, #fuzzy {
+/* blah blah */
+}
+              </code></pre>
+              </section>
+              <section >
+                  <h3>Pop quiz</h3>
+
+              <pre><code>
+div p {
+/* blah blah */
+}
+              </code></pre>
+              </section>
+              <section>
+                  <h3>Pop quiz</h3>
+
+              <pre><code>
+body div {
+/* blah blah */
+}
+              </code></pre>
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ## Questions?
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## CSS Properties
+              </section>
+              <section data-markdown>
+                  ###CSS Properties
+
+                  There are literally hundreds of css properties that are available for use. We don't have time to go over more than just a few. We will go over a few of the most common. However, the best strategy is to google for styling options as you're working.
+              </section>
+              <section data-markdown class='table-32px'>
+                  ###common CSS Properties
+
+                  Property | Description
+                  --- | ---
+                  `background-color` | background color for an element
+                  `color` | color of the _text_ in an element
+                  `font-family` | typeface for text
+                  `font-size` | size for text (px, %, em, pt)
+                  `font-weight` | used to bold text (if possible)
+                  `text-decoration` | used for underline (mostly)
+                  `height` | specifies the height of an element
+                  `width` | specifies the width of an element
+              </section>
+              <section data-markdown class='table-32px'>
+                  ###Color in CSS
+
+                  Method | Syntax | Description
+                  --- | --- | ---
+                  color name | `white` | a list of 140 predefined colors
+                  hexidecimal | `#FF0000` | RGB values in hex 00 - FF (0 - 255)
+                  RGB | `rgb(255, 0, 187)` | RGB values in decimal numbers (0 - 255)
+                  RGBA | `rgba(255, 0, 187, 0.5)` | RGB values with an added alpha (opacity) value
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Folder Structure
+
+                  - Still not exciting
+                  - Still important
+              </section>
+              <section data-markdown>
+                  ### Project Setup
+
+                  Wherever you are going to keep your project work:
+                  - Create a new folder called CSS-Exercise
+                  - Inside that folder create two files called `index.html` & `main.css`
+              </section>
+              <section>
+                  <h3>Set up</h3>
+                  <h4>Linking HTML and CSS files</h4>
+
+                  <p>Add this element to your HTML page's head</p>
+              <pre> <!-- this is not indented correctly because it's 'preformated' -->
+                <code>
+<link src='main.css' rel='stylesheet' type='text/css' />
+                </code>
+              </pre>
+              </section>
+          </section>
+<!--LAB 2-->
+          <section>
+              <section data-markdown>
+                  ## Lab 2
+                  ###Styling an HTML page
+              </section>
+              <section>
+                <h3>Simple CSS Styles</h3>
+
+                <p>Include at least one of each:</p>
+                <ul>
+                    <li>class selector</li>
+                    <li>id selector</li>
+                    <li>child selector</li>
+                    <li>multiple selectors</li>
+                </ul>
+              </section>
+              <section>
+                <h3>Simple CSS Styles</h3>
+                <p>Apply the following CSS properties:</p>
+                <ul>
+                  <li>background-color</li>
+                  <li>color</li>
+                  <li>font-family</li>
+                  <li>font-size</li>
+                  <li>one or more additional properties of your choice</li>
+                </ul>
+              </section>
+          </section>
+<!--NEW SECTION-->
+
+<!-- CSS POSITIONING -->
+          <section data-markdown>
+              ## CSS POSITIONING
+          </section>
+          <section>
+            <section data-markdown>
+                ## Block vs. Inline Elements
+            </section>
+            <section data-markdown>
+                ###Block Elements
+
+                **Block elements** each appear on a new line of a web page, like paragraphs. Spatially, what is happening is that the block element takes up all of the horizontal space it can. It stretches to fill all the space to the left and right of the element within its parent container.
+            </section>
+            <section data-markdown>
+                ###Inline Elements
+
+                **Inline elements** are rendered without starting a new line. They appear side by side until reaching the edge of its parent container. Then it will start a new line.
+            </section>
+            <section data-markdown>
+                ###Block vs. Inline Elements
+
+                ![block versus inline elements](images/example-blockinline.png)
+            </section>
+            <section data-markdown>
+                ###Block vs. Inline Elements
+
+                - _Inline element_: `&lt;a&gt; &lt;img&gt;`
+
+                - _Block element_: `&lt;div&gt; &lt;p&gt; &lt;ul&gt; &lt;li&gt; &lt;table&gt;` ...and just about everything else.
+            </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## The box model
+              </section>
+              <section data-markdown>
+                  ### The box model
+
+                  Every HTML element is in a box, regardless of its visible shape.
+              </section>
+              <section data-markdown>
+                  ### The box model
+
+                  The total size of an element is a combination of the following:
+                  - Content
+                  - Padding
+                  - Border
+                  - Margin
+              </section>
+              <section data-markdown>
+                  ### The box model
+
+                  ![box model](images/boxmodel.png)
+              </section>
+              <section data-markdown>
+                  ### The box model
+
+                  ![box model](images/catboxmodel.jpg)
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Padding
+              </section>
+              <section data-markdown>
+                  ### padding
+
+                  Padding is the space between the content within an element and the border. Padding can be specified in units of pixels (px), Ems (em), or points (pt) or percentage (%) of the containing element.
+              </section>
+              <section data-markdown>
+                  ### padding
+
+                  Padding is a CSS property (just like color or font-family) and is defined using the same rules. The only difference is that there a few different ways to write them.
+              </section>
+              <section>
+                  <h3>padding</h3>
+
+              <pre>
+                <code>p {
+   padding: 10px;/* 10 px of padding on all sides */
+   }
+p {
+   padding: 10px 5px;
+    /* 10 px on top/bottom, 5px on left/right */
+   }
+p {
+   padding-top: 5px;
+   padding-right: 10px;
+   padding-bottom: 15px;
+   padding-left: 20px;
+   }
+p {
+   padding: 5px 10px 15px 20px;
+    /* top, right, bottom, left */}
+                </code>
+              </pre>
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ##border
+              </section>
+              <section data-markdown>
+                  ###The box model
+
+                  ![box model](images/boxmodel.png)
+              </section>
+              <section data-markdown>
+                  ###border
+
+                  Border is the edge around the element. It has elements of thickness, style, and color.
+              </section>
+              <section data-markdown>
+                  ###border
+
+                  Like padding, border is a CSS property and is defined using CSS rules. Also like padding, there a few different ways to specify a border.
+              </section>
+              <section>
+                  <h3>border</h3>
+              <pre>
+                <code>
+p { /* each property specified separately */
+   border-width: 10px; /* thickness */
+   border-style: solid;
+   border-color: blue;
+   }
+p { /* all properties specified in one rule */
+   border: 1px dashed black;
+   }
+p { /* Two separate styles on one element */
+   border-top: 1px dotted #FF0000;
+   border-bottom: 1px groove #FF0;
+   }
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ###border styles
+
+                  ![border styles](images/borderStyles.png)
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Margin
+              </section>
+              <section data-markdown>
+                  ###The box model
+
+                  ![box model](images/boxmodel.png)
+              </section>
+              <section data-markdown>
+                  ###Margin
+
+                  Margins are the space outside the element that separates it from other elements. It is 'outside the fence' in terms of its relationship to the border.
+              </section>
+              <section data-markdown>
+                  ###Margin
+
+                  Like padding & border is a CSS property and is defined using CSS rules. Much like padding, there a few different ways to specify it.
+              </section>
+              <section>
+                  <h3>Margin</h3>
+
+              <pre>
+                <code>p {
+margin: 10px; /* 10 pixels of margin on all sides */
+}
+p {
+margin: 10px 5px; /* 10 px on top/bottom, 5px on left/right */
+}
+p {
+margin-top: 5px;
+margin-right: 10px;
+margin-bottom: 15px;
+margin-left: 20px;
+}
+p {
+margin: 5px 10px 15px 20px; /* top, right, bottom, left */
+}
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ###Auto Margin
+
+                  If margin is set to `auto` on an element that has a set width, it will take up as much space as possible. You can use this to center or left or right justify an element. This only works for horizontally centering.
+              </section>
+              <section>
+                  <h3>Auto Margin</h3>
+
+              <pre>
+                <code>p {
+margin: 0 auto;
+width: 300px;
+}
+p {
+margin-right: auto;
+margin-left: 10px;
+width: 25%;
+}
+                </code>
+              </pre>
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ## Questions?
+          </section>
+
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Exercise
+                  ### Messing with the Box Model
+              </section>
+              <section>
+                  <img src="images/30mins.png" alt="30 minutes" class='timer'>
+                  <h3>Box Model Shenanigans</h3>
+
+                  <ul>
+                      <li>New Project (index.html, main.css)</li>
+                      <li>Create a basic HTML site</li>
+                      <li>Add 3 div elements with IDs and put a paragraph tag in each.</li>
+                      <li>Add some content</li>
+                      <li>Apply the following CSS properties</li>
+                      <li>Using the ID selectors, specify padding, border, and margin for each div</li>
+                      <li>try different border styles</li>
+                      <li>try setting some different widths and heights just to see how they're affected (if at all)</li>
+                  </ul>
+              </section>
+          </section>
+
+<!--NEW SECTION-->
+          <section>
+            <section data-markdown>
+                ##CSS Positioning
+            </section>
+            <section data-markdown>
+                ###CSS Positioning
+
+                Every HTML element has a property called `position` which dictates how that element flows on a document. This property can be set to a number of different values, each of which behave slightly differently. This gives a web developer greater control over the design and overall look of a page.
+            </section>
+          </section>
+          <section>
+            <section data-markdown>
+                ##static positioning
+            </section>
+            <section data-markdown>
+                ###static positioning
+
+                Static positioning is the default for all HTML elements. And it adheres to the previously discussed behavior of block and inline elements. Block elements flow from top to bottom and each element appears on a new line. Inline elements flow from left to right, wrapping as needed.
+            </section>
+          </section>
+          <section>
+            <section data-markdown>
+                ## relative positioning
+            </section>
+            <section data-markdown>
+                ###relative positioning
+
+                Relative positioned elements appear in the normal flow of the document but can be offset by using the top, bottom, left and right properties.
+            </section>
+            <section data-markdown>
+                ### relative positioning
+
+                Demo
+            </section>
+          </section>
+          <section>
+            <section data-markdown>
+                ## Absolute positioning
+            </section>
+            <section data-markdown >
+                ### Absolute positioning
+
+                Absolutely positioned are removed from the normal flow of the document. They are not affected by and do not affect other elements in the flow, regardless of their position in the document.
+            </section>
+            <section data-markdown>
+                ### Absolute positioning
+
+                Absolute positioned elements appear relative to their parent container elements, using the top/bottom/right/left properties for offsets.
+            </section>
+            <section data-markdown>
+                ### Absolute positioning
+
+                You can think of absolutely positioned elements as being stuck onto a page with a magnet. Once placed, they don't move.
+            </section>
+            <section data-markdown>
+                ### Absolute positioning
+
+                Demo
+            </section>
+          </section>
+          <section>
+            <section data-markdown >
+                ###Fixed positioning
+
+                Fixed positioned elements are very similar to absolutely positioned elements. Fixed positioned elements are also removed from the normal flow of the document. They are not affected by and do not affect other elements in the flow, regardless of their position in the document.
+            </section>
+            <section data-markdown>
+                ### fixed positioning
+
+                Fixed positioned elements appear relative to the view port (the browser window), using the top/bottom/right/left properties for offsets.
+            </section>
+            <section data-markdown>
+                ### fixed positioning
+
+                Fixed elements do not move when you scroll up or down the page. They seem fixed to the window.
+            </section>
+            <section data-markdown>
+                ### Fixed positioning
+
+                Demo
+            </section>
+          </section>
+
+<!--NEW SECTION-->
+        <section>
+            <section data-markdown>
+                ## Float
+            </section>
+            <section data-markdown>
+                ### Float
+
+                "Floating" takes an element in the normal flow and pushes it as far to the left or right of its parent element as possible. When an element is floated, other elements will wrap around it
+            </section>
+            <section data-markdown>
+                ### Float
+
+                - Always specify a width when floating an element
+                - Specify whether an element should float left or right
+                - If two or more elements are floated, they will 'stack up' on whichever side they are floated to.
+            </section>
+            <section data-markdown>
+                ### Float
+
+                ![float demo](images/floatDemo.png)
+            </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Clear
+              </section>
+              <section data-markdown>
+                  ### Clear
+
+                  Clear specifies on which side of an element other elements cannot appear. You can clear left, right, or both.
+              </section>
+              <section data-markdown>
+                  ### Float
+
+                  ![float demo](images/clearDemo.png)
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Z-index
+              </section>
+              <section data-markdown>
+                  ### z-index
+
+                  When elements are moved out of the normal flow of content, they can overlap. Z-index can be used to define the order of overlapping elements. The element with the highest z-index goes on top.
+              </section>
+              <section data-markdown>
+                  ### Z-index
+
+                  Demo
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Exercise
+                  ###CSS Positioning
+              </section>
+              <section>
+                  <img src="images/30mins.png" alt="30 minutes" class='timer'>
+                  <h2>CSS Positioning Exercise</h2>
+
+                  <ul>
+                      <li>New Project (index.html, main.css)</li>
+                      <li>Create a basic HTML site</li>
+                      <li>Add 4 divs and add some content to each</li>
+                      <li>Float 2 of the divs so that they rest side-by-side</li>
+                      <li>In another of the divs, use relative positioning to offset some content inside the div</li>
+                      <li>In the last div, attach the content to the viewport using fixed positioning. Add enough height to the body tag to scroll up and down</li>
+                  </ul>
+              </section>
+         </section>
+<!--LAB 3-->
+          <section>
+              <section data-markdown>
+                  ## Lab 3
+                  ### Image Gallery
+              </section>
+              <section>
+                  <h3>CSS Lab</h3>
+
+                  <ul>
+                      <li>Make a website!</li>
+                      <li>Your website should include 3 rows of images, 3 images per row</li>
+                      <li>Each image should say something about you (hobby, vacation spot, favorite book, etc.)</li>
+                      <li>Each image should have an explanatory caption</li>
+                      <li>Each row of images should be contained in a div with padding and margin</li>
+                      <li>Each image should have a border, padding, and margin</li>
+                      <li>Your page should include a header and footer</li>
+                      <li>Use at least one absolutely positioned element</li>
+                      <li>Use at least one fixed positioned element</li>
+                  </ul>
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ![new content ahead](images/grant.png)
+          </section>
+
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+              ## HTML5
+              </section>
+              <section data-markdown>
+                  ###HTML5
+
+                  HTML5 is a new spec from the W3C that expands the language of HTML and adds a bunch of new features.
+              </section>
+              <section data-markdown>
+                  ###HTML5
+
+                  We don't have time to go into all the details of all of HTML5's new features. Here are some highlights:
+
+                  - New semantic tags
+                  - Multimedia (new Audio and Video tags)
+                  - Offline storage (local storage)
+                  - 3d graphics support
+                  - CSS3 animations and effects
+              </section>
+              <section data-markdown>
+                  ###HTML5
+
+                  We will take a very brief look at a number of the HTML semantic tags that are available for use in your projects.
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown class='table-32px'>
+              ###new HTML5 tags
+
+              class | Description
+              --- | ---
+              `section` | Container tag used for page organization
+              `header` | Container for introductory and navigational stuff
+              `footer` | Container for footer content (site map, internal links, etc.)
+              `nav` | Container for a major block of navigation links
+              `audio` | Multimedia tag for playing audio files
+              `video` | Multimedia tag for playing video files
+              `canvas` | element can be used to draw graphics via JavaScript
+            </section>
+            <section data-markdown>
+              ###resources
+
+              - [HTML5 Please](http://html5please.com)
+              - [HTML5 Rocks](http://html5rocks.com)
+              - [CanIUse Compatibility Tables](http://caniuse.com)
+            </section>
+        </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+          ## Questions
+        </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ![new content ahead](images/grant.png)
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                      ## welcome back!
+              </section>
+              <section data-markdown>
+                      ###Goals for this unit
+                      - Review
+                      - HTML5 tags
+                      - CSS psuedoselectors & psuedoclasses
+                      - CSS Media Queries
+              </section>
+              <section data-markdown>
+                      ## Review
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## CSS Psuedo-classes and psuedo-selectors
+              </section>
+              <section data-markdown>
+                  ###CSS Psuedoclasses
+
+                  Psuedo-classes are used to add special effects to some selectors.
+              </section>
+              <section data-markdown>
+                  ### Psuedo-class syntax
+
+                  `selector:psuedo-class { property:value }`
+
+                  `selector.class:psuedo-class { property:value }`
+              </section>
+              <section >
+                  <h3>Anchor Psuedo-classes</h3>
+
+              <pre>
+                <code class='css'>a:link { color: aliceblue; } /* unvisited link */
+a:visited { color: darkblue; } /* visited link */
+a:hover { color: lightblue; } /* mouse over link */
+a:active { color: yellow; } /* mouse click link */
+                </code>
+              </pre>
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown class='table-32px'>
+              ### Other psuedo-classes
+
+              class | Description
+              --- | ---
+              `:first-child` | Any element which is the first child of its parent
+              `:first-letter` | First letter of an element's content
+              `:first-line` | First line of an element's content
+              `:last-child` | Any element which is the last child of its parent
+              `:only-child` | Any element which is the only child of its parent
+              `:empty` | Any element which has no children
+              `:nth-child` | Any element which is the nth child of its parent
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ### nth-child syntax
+
+                  `:nth-child` takes a mathmatic express to determine which children to select.
+
+                  `element:nth-child(an + b) { property:value; }`
+              </section>
+              <section data-markdown>
+                  ### nth-child examples
+
+                  These expressions can be as complex as you want. Feel free to mess around with it.
+
+                  `div:nth-child(3) { color:red; }`
+
+                  `p:nth-child(4n) { color:blue; }`
+
+                  `ul:nth-child:(2n + 5) { color:yellow; }`
+              </section>
+              <section data-markdown>
+                  ### nth-child examples
+
+                  Realistically though, in practice `nth-child` is usually only used to alternate styles for large groups of data like table rows, etc.
+
+                  `element:nth-child(even) { property:value; }`
+
+                  `element:nth-child(odd) { property:value; }`
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## @font-face
+              </section>
+              <section data-markdown>
+                  ###@font-face
+
+                  The @font-face property allows you to use non-default fonts on your web sites
+              </section>
+              <section >
+                  <h3>@font-face usage</h3>
+
+              <pre>
+                <code class='css'>@font-face {
+font-family: 'myCoolFont';
+src: url('path/to/myCoolFont.ttf');
+}
+
+div.demo {
+font-family: 'myCoolFont';
+}
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ###@font-face
+
+                  1. Download your font
+                  2. Place the font file in  your web site
+                  3. Create a @font-face CSS rule
+                  1. Give your font an identifier (e.g., “myCoolFont”)
+                  2. Point the identifier to your font file(s)
+              </section>
+              <section data-markdown>
+                  ###@font-face
+
+                  You can download fonts from external sources or reference them via the internet using services like Google Web Fonts.
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ## Questions
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ##CSS3 Features
+              </section>
+              <section data-markdown>
+                  ###CSS3 Vendor Prefix
+
+                  Not all browsers support all of the newer CSS3 properties, which means we sometimes need to create rules for certain browsers
+              </section>
+
+              <section >
+                  <h3>border-radius usage</h3>
+
+              <pre>
+                <code class='css'>.example {
+-moz-border-radius: purple;
+-ms-border-radius: purple;
+-webkit-border-radius: purple;
+-o-border-radius: purple;
+border-radius: purple;
+}
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ###Vendor prefixes
+
+                  Order matters! The non-prefixed property should always go last.
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ###Handy CSS3 properties
+
+                  There are a great many very handy CSS3 properties that you may need to use on your current and future projects. They can add a level of polish to your project that really sells it. That said, we dont have a time to go over even a very few of them in details so I'll just create a list that you can investigate further.
+              </section>
+              <section data-markdown class='table-32px'>
+                  ###CSS3 properties
+
+                  Property | Description
+                  --- | ---
+                  `border-radius` | creates rounded corners or circular borders for elements
+                  `rgba` | An alternate way to define color and alpha
+                  `opacity` | Controls the transparency of an element
+                  `box-shadow` | Adds a calculated shadow effect to an element
+                  `text-shadow` | Adds a calculated shadow effect to an element
+                  `transforms` | Adds the ability to transform HTML elements (rotation, scale, translate)
+                  `animations` | Allows for one more or property changes to be applied as an animation
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Responsive Design
+              </section>
+              <section data-markdown>
+                  ###Responsive Design
+
+                  Changes your website presentation in relation to the screen size
+              </section>
+              <section data-markdown>
+                  ###Media Queries
+
+                  This is done via Media Queries. Media queries are able to detect a bunch of things about the device with which you're viewing a site. The browser can use specifically developed CSS styles for those different screen sizes.
+              </section>
+              <section >
+                  <h3>Media Query example</h3>
+
+              <pre>
+                <code class='css'>@media (max-width: 600px) {
+/* specific styles for this device size */
+}
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ###Things to do with media queries
+
+                  - resize images / font
+                  - collapse navigation
+                  - remove some larger content (video / images)
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section data-markdown>
+              ## Questions?
+          </section>
+<!--NEW SECTION-->
+          <section>
+          <section data-markdown>
+              ##Lab 4
+              ###Bringing it all together
+          </section>
+          <section>
+              <h3>Responsive Lab</h3>
+
+              <ul>
+                  <li>Make a website!</li>
+                  <li>Your website should include 4 rows of images, 4 images per row</li>
+                  <li>Each image should have a heading</li>
+                  <li>Each image should have an explanatory caption</li>
+                  <li>Each image should have a border, padding, and margin</li>
+                  </ul>
+          </section>
+
+          <section>
+              <h3>Responsive Lab (cont)</h3>
+
+              <ul>
+                  <li>Your page should include a header and footer</li>
+                  <li>Your images should reformat based on the size of the view-port</li>
+                  <li>Use at least 2 media queries</li>
+                  <li>Some styling should change based on the size of the view-port (ex: border color around images changes based on screen width)</li>
+              </ul>
+          </section>
+
+          </section>
+<!----------------------------------------------->
+          <section>
+              <section data-markdown>
+                  ##HTML Forms
+              </section>
+              <section data-markdown>
+                  ### Forms
+
+                  Forms are used to send data back to a server from user inputs
+              </section>
+              <section>
+                  <h3>Form tags</h3>
+
+              <pre>
+                <code class='html'><form action="something" method="get">
+    <!-- Form inputs and other html -->
+</form>
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ### Methods and Actions
+
+                  **Action** is the URL you want the data to be sent to
+
+                  **Method** is the HTTP methods used to transfer data
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+              </section>
+              <section>
+                  <h3>Form tags</h3>
+
+              <pre>
+                <code class='html'>
+<input type='text' method="get" name='firstname' placeholder="Name?" />
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ###Types of inputs
+
+                  - Text (type=‘text’)
+                  - Radio Button (type=‘radio’)
+                  - Checkbox (type=‘checkbox’)
+                  - Password (type=‘password’)
+                  - Date (type=‘date’)
+                  - Time (type=‘time’)
+                  - Date & Time (type=‘datetime’)
+                  - Email (type=‘email’)
+                  - Submit
+                  - `&lt;input type=‘submit’/&gt;`
+                  - `&lt;button type=‘submit’/&gt;`
+              </section>
+              <section data-markdown>
+                  ## DEMO
+              </section>
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ##Bootstrap
+              </section>
+              <section data-markdown>
+                  ###Bootstrap
+
+                  HTML5 & CSS framework that combines
+                  - Responsive Design
+                  - Grid Positioning
+                  - Iconography
+                  - Mobile Templating
+                  - Javascript plugins
+              </section>
+              <section data-markdown>
+                  ###About Bootstrap
+
+                  Bootstrap is a CSS framework that makes making halfway—decent—looking sites a snap!
+
+                  It was created by Twitter and was made open source a few years ago
+              </section>
+              <section data-markdown>
+                  ###Bootstrap Grids
+
+                  The best of CSS positioning and table layouts
+                  - 12 columns wide
+                  - Infinite rows
+                  - Responsive-ready out of the box
+                  - Uses only CSS
+              </section>
+              <section>
+                  <h3>Rows & Columns</h3>
+
+              <pre>
+                <code class='html'><div class="container">
+  <div class="row">This is Row 1</div>
+  <div class="row">
+    <div class="col-md-6"> This is Row 2 Col 1 </div>
+    <div class="col-md-6"> This is Row 2 Col 2 </div>
+    </div>
+</div>
+                </code>
+              </pre>
+              </section>
+              <section data-markdown>
+                  ## DEMO
+              </section>
+
+              <section data-markdown>
+                  ###Where to get it
+
+                  http://www.getbootstrap.com > Getting Started
+
+                  Hit the "Download Bootstrap" button
+              </section>
+
+              <section>
+                  <h3>How to use it</h3>
+                  <ol>
+                      <li>Unzip the folder and rename it "bootstrap"</li>
+                      <li>Save "bootstrap" in the folder containing your html and css files</li>
+                      <li>Link to bootstrap in your index.html file</li>
+                  </ol>
+              </section>
+
+              <section>
+                  <pre><code class="html" id="no-wrap"><link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+                  </code></pre>
+              </section>
+
+              <section data-markdown>
+                  ![bootstrap cdn](images/bootstrap-cdn.png)
+
+                  Like jQuery, Bootstrap can also be linked via CDN.
+
+                  Just linking to the Bootstrap CDN will make a noticeable difference on your page
+              </section>
+
+              <section data-markdown>
+                  Before
+
+                  ![before bootstrap](images/no-bootstrap.png)
+
+                  After
+
+                  ![after bootstrap](images/with-bootstrap.png)
+              </section>
+
+              <section data-markdown>
+                  ###CSS Components
+
+                  Bootstrap provides a bunch of CSS Components
+                  - Grid layout
+                  - Buttons
+                  - Primary and Secondary headings
+                  - Form elements
+                  - Automatic table styling
+                  - All the things basically
+
+              </section>
+
+              <section data-markdown>
+                  ###CSS Components
+
+                  Bootstrap provides great docs which demonstrate each CSS component and how to add them to your site.
+
+                  There are so many things available in just the CSS portion of the Bootstrap. We don’t have time to look at them all.
+              </section>
+
+              <section>
+                  <h3>Using Bootstrap</h3>
+
+                  <p>As said before, all of the bootstrap components are shown on their docs but for the most part it’s as simple adding some classes to your html.</p>
+
+                  <p>ex:</p>
+                  <pre><code id="no-wrap"><a href="#" role="button" class="btn btn-primary">A button!</a></code></pre>
+
+              </section>
+
+          </section>
+<!--NEW SECTION-->
+          <section>
+              <section data-markdown>
+                  ## Lab 5
+                  ###Bringing it all together
+              </section>
+              <section data-markdown>
+                  Create a blog page using Bootstrap Grid. The page
+                  should have the following:
+
+                  - Header with Blog Title Center.
+                  - Nav section on Left, 1/3rd page width
+                  - Main section on Right, 2/3rd page width
+                  - A faked article of blog content
+                  - 1 image in the article
+                  - Footer with copyright, contact link, some other content
+                  - Use CSS psuedo classes, transforms, or animations
+              </section>
+          </section>
+
+      </div><!-- END SLIDES DIV -->
+
+    </div>
+
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
